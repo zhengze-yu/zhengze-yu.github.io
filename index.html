@@ -1,125 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zhengze Yu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Inter', sans-serif;
       background-color: #fafafa;
+      margin: 0;
+      color: #222;
+      line-height: 1.6;
     }
+
+    /* -------- NAVBAR -------- */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 60px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       z-index: 1000;
     }
-    header h1 {
-      font-size: 20px;
-      margin: 0;
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+    .nav-name {
       font-weight: 600;
+      font-size: 18px;
+      color: #222;
     }
     nav a {
-      margin-left: 30px;
+      margin-left: 24px;
       text-decoration: none;
       color: #333;
       font-weight: 500;
+      transition: color 0.2s ease;
     }
     nav a:hover {
-      color: #007acc;
+      color: #0070f3;
     }
+
+    /* -------- SECTIONS -------- */
     section {
       max-width: 900px;
-      margin: 120px auto 60px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 100px 20px 60px 20px;
     }
     h2 {
-      border-bottom: 2px solid #eaeaea;
-      padding-bottom: 6px;
+      font-size: 22px;
       color: #111;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
-    .about-container {
+
+    /* -------- ABOUT SECTION -------- */
+    .about {
       display: flex;
-      align-items: center;
-      gap: 30px;
+      align-items: flex-start;
       flex-wrap: wrap;
+      gap: 30px;
     }
-    .about-container img {
+    .about img {
       width: 180px;
       height: 180px;
-      border-radius: 10px;
+      border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
     .about-text {
       flex: 1;
+      min-width: 280px;
     }
-    .keywords span {
-      background-color: #e7f1ff;
-      color: #0056b3;
-      padding: 6px 12px;
+    .about-text h1 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+    .about-subtitle {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+    .tags span {
+      background-color: #eef3ff;
+      color: #0040a0;
+      padding: 6px 14px;
       border-radius: 16px;
       margin-right: 8px;
-      font-size: 14px;
-    }
-    .contact-links a {
+      font-size: 13px;
       display: inline-block;
-      margin-right: 12px;
-      padding: 8px 14px;
-      border-radius: 20px;
-      border: 1px solid #007acc;
-      color: #007acc;
+      margin-bottom: 6px;
+    }
+
+    /* -------- BUTTONS -------- */
+    .contact-buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 12px;
+      padding: 8px 16px;
+      border-radius: 24px;
+      border: 1px solid #0070f3;
+      color: #0070f3;
       text-decoration: none;
       font-size: 14px;
+      transition: all 0.2s ease;
     }
-    .contact-links a:hover {
-      background-color: #007acc;
+    .contact-buttons a:hover {
+      background-color: #0070f3;
       color: white;
     }
+
+    /* -------- CONTENT SECTIONS -------- */
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+
+    /* Smooth fade for section entry */
+    section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 
 <body>
-
-  <!-- Navigation Bar -->
+  <!-- NAVBAR -->
   <header>
-    <h1>Zhengze Yu</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#education">Education</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="nav-container">
+      <div class="nav-name">Zhengze Yu</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about">
-    <div class="about-container">
-      <img src="pic/profile.jpg" alt="Profile Photo">
+    <div class="about">
+      <img src="pic/profile.jpg" alt="Profile photo">
       <div class="about-text">
-        <h2>About Me</h2>
-        <p>Undergraduate student in Artificial Intelligence at the <b>University of Chinese Academy of Sciences</b> · advised by <b>Prof. [Advisor Name]</b>.</p>
-        <div class="keywords">
+        <h1>Zhengze Yu</h1>
+        <p class="about-subtitle">Undergraduate in Artificial Intelligence at the University of Chinese Academy of Sciences · advised by Prof. [Advisor Name]</p>
+        <div class="tags">
           <span>Video Editing</span>
           <span>Multimodal AI</span>
           <span>Large Language Models</span>
         </div>
-        <div class="contact-links" style="margin-top:10px;">
+        <div class="contact-buttons">
           <a href="mailto:your_email@example.com">Email</a>
           <a href="cv.pdf">CV</a>
         </div>
@@ -127,7 +164,7 @@
     </div>
   </section>
 
-  <!-- News Section -->
+  <!-- NEWS -->
   <section id="news">
     <h2>News</h2>
     <ul>
@@ -136,13 +173,13 @@
     </ul>
   </section>
 
-  <!-- Education Section -->
+  <!-- EDUCATION -->
   <section id="education">
     <h2>Education</h2>
-    <p><b>University of Chinese Academy of Sciences</b>, B.E. in Artificial Intelligence, Sep 2021 – Jun 2025.</p>
+    <p><b>University of Chinese Academy of Sciences</b><br>B.E. in Artificial Intelligence · Sep 2021 – Jun 2025</p>
   </section>
 
-  <!-- Research Section -->
+  <!-- RESEARCH -->
   <section id="research">
     <h2>Research</h2>
     <ul>
@@ -151,13 +188,23 @@
     </ul>
   </section>
 
-  <!-- Contact Section -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
     <p>CV: <a href="cv.pdf">Download Here</a></p>
   </section>
 
+  <script>
+    // Fade in sections when scrolling
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
 </body>
 </html>
 
