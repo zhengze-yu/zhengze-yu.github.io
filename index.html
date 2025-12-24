@@ -2,64 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhengze Yu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: "Times New Roman", serif;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.6;
-      color: #222;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #fafafa;
     }
-    h1, h2 {
-      text-align: center;
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 60px;
+      z-index: 1000;
     }
-    a {
-      color: #0056b3;
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: 600;
+    }
+    nav a {
+      margin-left: 30px;
       text-decoration: none;
+      color: #333;
+      font-weight: 500;
     }
-    a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #007acc;
     }
-    .links {
-      text-align: center;
-      margin-bottom: 30px;
+    section {
+      max-width: 900px;
+      margin: 120px auto 60px auto;
+      padding: 0 20px;
     }
-    .section {
-      margin-top: 40px;
+    h2 {
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 6px;
+      color: #111;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .about-container img {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      flex: 1;
+    }
+    .keywords span {
+      background-color: #e7f1ff;
+      color: #0056b3;
+      padding: 6px 12px;
+      border-radius: 16px;
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    .contact-links a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 1px solid #007acc;
+      color: #007acc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .contact-links a:hover {
+      background-color: #007acc;
+      color: white;
     }
   </style>
 </head>
+
 <body>
-  <h1>Zhengze Yu</h1>
-  <div class="links">
-    <a href="mailto:yuzhengze21@mails.ucas.ac.cn">Email</a> |
-    <a href="https://scholar.google.com/citations?user=XXXXXX">Google Scholar</a> |
-    <a href="https://github.com/zhengze-yu">GitHub</a>
-  </div>
 
-  <p>Hello! I am <b>Zhengze Yu</b>, an undergraduate at the <b>University of Chinese Academy of Sciences</b>, majoring in <b>Artificial Intelligence</b>. My research interests include video editing, cross-modal content generation, and large language models (LLMs).</p>
+  <!-- Navigation Bar -->
+  <header>
+    <h1>Zhengze Yu</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <div class="section">
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-container">
+      <img src="pic/profile.jpg" alt="Profile Photo">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Undergraduate student in Artificial Intelligence at the <b>University of Chinese Academy of Sciences</b> · advised by <b>Prof. [Advisor Name]</b>.</p>
+        <div class="keywords">
+          <span>Video Editing</span>
+          <span>Multimodal AI</span>
+          <span>Large Language Models</span>
+        </div>
+        <div class="contact-links" style="margin-top:10px;">
+          <a href="mailto:your_email@example.com">Email</a>
+          <a href="cv.pdf">CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news">
+    <h2>News</h2>
+    <ul>
+      <li>[Month, Year] Placeholder for your latest research or project update.</li>
+      <li>[Month, Year] Another placeholder for news or event.</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
     <h2>Education</h2>
-    <p><b>University of Chinese Academy of Sciences</b>, B.E. in Artificial Intelligence (2021–2025)</p>
-  </div>
+    <p><b>University of Chinese Academy of Sciences</b>, B.E. in Artificial Intelligence, Sep 2021 – Jun 2025.</p>
+  </section>
 
-  <div class="section">
+  <!-- Research Section -->
+  <section id="research">
     <h2>Research</h2>
     <ul>
-      <li><b>Video Editing Based on Attention Injection</b> — Developed multi-stage cross-modal editing pipeline integrating text, image, and video.</li>
-      <li><b>Multilingual Text Compression via Subword Tokenization</b> — Applied BPE and analyzed multilingual compression efficiency for LLM tokenization.</li>
+      <li><b>Video Editing Based on Attention Injection</b> — Multi-stage cross-modal video editing framework integrating text, image, and video.</li>
+      <li><b>Multilingual Text Compression via Subword Tokenization</b> — Applied BPE for multilingual compression and token representation optimization.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li>Cross-Domain Multilingual Text Clustering Analysis</li>
-      <li>Video Generation Models and Optimization Techniques</li>
-    </ul>
-  </div>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+    <p>CV: <a href="cv.pdf">Download Here</a></p>
+  </section>
+
 </body>
 </html>
+
