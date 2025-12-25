@@ -25,14 +25,17 @@
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       z-index: 1000;
     }
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 24px;
+    .container {
+  max-width: 960px;   /* 统一页面宽度 */
+  margin: 0 auto;     /* 居中 */
+  padding: 0 24px;    /* 两边留空距 */
     }
+    .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0; /* 左右留白改由 .container 控制 */
+}
     .nav-name {
       font-weight: 600;
       font-size: 18px;
@@ -50,11 +53,12 @@
     }
 
     /* -------- SECTIONS -------- */
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 100px 20px 60px 20px;
-    }
+   section {
+  max-width: 960px;  /* 跟 container 一致 */
+  margin: 0 auto;
+  padding: 100px 24px 60px 24px; /* 跟导航栏保持相同内边距 */
+}
+
     h2 {
       font-size: 22px;
       color: #111;
@@ -131,8 +135,8 @@
 
 <body>
   <!-- NAVBAR -->
-  <header>
-    <div class="nav-container">
+<header>
+  <div class="container nav-container">
       <div class="nav-name">Zhengze Yu</div>
       <nav>
         <a href="#about">About</a>
