@@ -16,41 +16,68 @@
     }
 
     /* -------- NAVBAR -------- */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      border-bottom: 1px solid #eee;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-      z-index: 1000;
-    }
-    .container {
-  max-width: 960px;   /* 统一页面宽度 */
-  margin: 0 auto;     /* 居中 */
-  padding: 0 24px;    /* 两边留空距 */
-    }
-    .nav-container {
+    /* -------- NAVBAR -------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px; /* 左右留白 */
+}
+
+.nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 0; /* 左右留白改由 .container 控制 */
+  justify-content: flex-start; /* ✅ 从左开始排 */
+  gap: 40px; /* ✅ 控制名字与菜单的间距 */
+  padding: 12px 0;
 }
-    .nav-name {
-      font-weight: 600;
-      font-size: 18px;
-      color: #222;
-    }
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    nav a:hover {
-      color: #0070f3;
-    }
+
+.nav-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+}
+
+nav {
+  display: flex;
+  gap: 24px; /* ✅ 菜单间距 */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0070f3;
+}
+
+/* ✅ 手机端修正：防止名字贴边 */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px; /* 手机上稍微大一点内边距 */
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
 
     /* -------- SECTIONS -------- */
    section {
