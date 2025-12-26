@@ -96,52 +96,84 @@ nav a:hover {
 
     /* -------- ABOUT SECTION -------- */
     .about {
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .about img {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-    .about-text {
-      flex: 1;
-      min-width: 280px;
-    }
-    .about-text h1 {
-      font-size: 26px;
-      margin-bottom: 6px;
-    }
-    .about-subtitle {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 14px;
-    }
-    .tags span {
-      background-color: #eef3ff;
-      color: #0040a0;
-      padding: 6px 14px;
-      border-radius: 16px;
-      margin-right: 8px;
-      font-size: 13px;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-    .intro {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column; /* 竖直排列 */
+  flex: 1;
+  min-width: 0; /* 防止文字撑开 */
+}
+
+.about-text h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.about-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.tags span {
+  background-color: #eef3ff;
+  color: #0040a0;
+  padding: 6px 14px;
+  border-radius: 16px;
+  margin-right: 8px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.contact-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid #0070f3;
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.contact-buttons a:hover {
+  background-color: #0070f3;
+  color: white;
+}
+
+.intro {
   font-size: 15px;
   line-height: 1.7;
   color: #333;
-  margin-top: 24px;
-  max-width: 720px; /* 控制宽度 */
+  margin-top: 24px; /* 与按钮保持间距 */
+  max-width: 720px;  /* 控制文字宽度 */
 }
 
 @media (max-width: 700px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
   .intro {
-    margin-top: 16px; /* 手机端自动上间距 */
+    margin-top: 16px;
+    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -190,18 +222,21 @@ nav a:hover {
     </div>
   </header>
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
 <section id="about">
   <div class="about">
     <img src="profile.jpg" alt="Profile photo">
+
     <div class="about-text">
       <h1>Zhengze Yu</h1>
       <p class="about-subtitle">B.E. in Artificial Intelligence, University of Chinese Academy of Sciences (UCAS)</p>
+
       <div class="tags">
         <span>Multimodal Learning</span>
         <span>Video Editing</span>
         <span>Vision-Language Alignment</span>
       </div>
+
       <div class="contact-buttons">
         <a href="mailto:yuzhengze21@mails.ucas.ac.cn">
           <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -210,6 +245,7 @@ nav a:hover {
           </svg>
           Email
         </a>
+
         <a href="cv.pdf">
           <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -219,7 +255,6 @@ nav a:hover {
         </a>
       </div>
 
-      <!-- ✅ intro 段落放在这里 -->
       <p class="intro">
         <b>Welcome to my page!</b> I work on <b>video editing</b> and <b>multimodal learning</b>, 
         with a focus on <b>vision-language alignment</b> and <b>generative models</b> for controllable video transformation.
@@ -239,6 +274,7 @@ nav a:hover {
     </div>
   </div>
 </section>
+
 
 
   <!-- NEWS -->
