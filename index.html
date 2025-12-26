@@ -131,6 +131,22 @@ nav a:hover {
       display: inline-block;
       margin-bottom: 6px;
     }
+    .intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-top: 24px;
+  padding-left: 210px; /* ✅ 对齐头像左边缘：头像180px + 左右间距30px */
+  max-width: 720px; /* 控制宽度 */
+}
+
+@media (max-width: 700px) {
+  .intro {
+    padding-left: 0; /* 手机端自动居中 */
+    margin-top: 16px;
+  }
+}
+
 
     /* -------- BUTTONS -------- */
     .contact-buttons a {
@@ -206,27 +222,25 @@ nav a:hover {
     CV
   </a>
 </div>
-
-  <p class="intro" style="margin-top: 24px; font-size: 15px; line-height: 1.7; text-align: left; color: #333;">
-  <b>Welcome to my page!</b> I work on <b>video editing</b> and <b>multimodal learning</b>, with a focus on 
-  <b>vision-language alignment</b> and <b>generative models</b> for controllable video transformation.
-  <br><br>
-  I am an undergraduate researcher at the <b>Institute of Automation, Chinese Academy of Sciences (UCAS)</b>, 
-  where I explore multimodal generation and video understanding. 
-  My recent projects involve <b>attention-injection-based video editing</b> and <b>cross-modal alignment frameworks</b>.
-  <br><br>
-  I am fortunate to be advised by <b>Prof. Junyu Gao</b>, whose guidance has greatly shaped my research 
-  in video generation and alignment methods.
-  <br><br>
-  For more details, please check my 
-  <a href="cv.pdf" target="_blank"><b>CV</b></a> 
-  or reach out via 
-  <a href="mailto:yuzhengze21@mails.ucas.ac.cn"><b>email</b></a>.
-</p>
-
-
       </div>
     </div>
+      <p class="intro">
+    <b>Welcome to my page!</b> I work on <b>video editing</b> and <b>multimodal learning</b>, 
+    with a focus on <b>vision-language alignment</b> and <b>generative models</b> for controllable video transformation.
+    <br><br>
+    I am an undergraduate researcher at the <b>Institute of Automation, Chinese Academy of Sciences (UCAS)</b>, 
+    where I explore multimodal generation and video understanding. 
+    My recent projects involve <b>attention-injection-based video editing</b> and <b>cross-modal alignment frameworks</b>.
+    <br><br>
+    I am fortunate to be advised by <b>Prof. Junyu Gao</b>, whose guidance has greatly shaped my research 
+    in video generation and alignment methods.
+    <br><br>
+    For more details, please check my 
+    <a href="cv.pdf" target="_blank"><b>CV</b></a> 
+    or reach out via 
+    <a href="mailto:yuzhengze21@mails.ucas.ac.cn"><b>email</b></a>.
+  </p>
+
   </section>
 
   <!-- NEWS -->
