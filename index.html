@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zhengze Y</title>
+  <title>Zhengze Yu</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
@@ -16,75 +16,72 @@
     }
 
     /* -------- NAVBAR -------- */
-    /* -------- NAVBAR -------- */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  z-index: 1000;
-}
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid #eee;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px; /* 左右留白 */
-}
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* ✅ 从左开始排 */
-  gap: 40px; /* ✅ 控制名字与菜单的间距 */
-  padding: 12px 0;
-}
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 40px;
+      padding: 12px 0;
+    }
 
-.nav-name {
-  font-weight: 600;
-  font-size: 18px;
-  color: #222;
-}
+    .nav-name {
+      font-weight: 600;
+      font-size: 18px;
+      color: #222;
+    }
 
-nav {
-  display: flex;
-  gap: 24px; /* ✅ 菜单间距 */
-}
+    nav {
+      display: flex;
+      gap: 24px;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
 
-nav a:hover {
-  color: #0070f3;
-}
+    nav a:hover {
+      color: #0070f3;
+    }
 
-/* ✅ 手机端修正：防止名字贴边 */
-@media (max-width: 600px) {
-  .container {
-    padding: 0 20px; /* 手机上稍微大一点内边距 */
-  }
-  .nav-container {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  nav {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-}
-
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+      .nav-container {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
 
     /* -------- SECTIONS -------- */
-   section {
-  max-width: 960px;  /* 跟 container 一致 */
-  margin: 0 auto;
-  padding: 100px 24px 60px 24px; /* 跟导航栏保持相同内边距 */
-}
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 100px 24px 60px 24px;
+    }
 
     h2 {
       font-size: 22px;
@@ -98,8 +95,8 @@ nav a:hover {
     .about {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .about img {
@@ -112,20 +109,20 @@ nav a:hover {
 
 .about-text {
   display: flex;
-  flex-direction: column; /* 竖直排列 */
+  flex-direction: column;
+  justify-content: flex-start;
   flex: 1;
-  min-width: 0; /* 防止文字撑开 */
+  min-width: 0;
+  gap: 12px;
 }
 
-.about-text h1 {
-  font-size: 26px;
-  margin-bottom: 6px;
-}
+.about-text h1 { font-size: 26px; margin: 0; }
+.about-subtitle { font-size: 15px; color: #555; margin: 0; }
 
-.about-subtitle {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 14px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 6px;
 }
 
 .tags span {
@@ -133,68 +130,57 @@ nav a:hover {
   color: #0040a0;
   padding: 6px 14px;
   border-radius: 16px;
-  margin-right: 8px;
   font-size: 13px;
-  display: inline-block;
-  margin-bottom: 6px;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .contact-buttons a {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: 12px;
-  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
   border-radius: 24px;
   border: 1px solid #0070f3;
   color: #0070f3;
   text-decoration: none;
   font-size: 14px;
+  line-height: normal;
   transition: all 0.2s ease;
 }
 
-.contact-buttons a:hover {
-  background-color: #0070f3;
-  color: white;
-}
+.contact-buttons a svg { margin-right: 6px; }
 
-.intro {
+/* 单独 intro 块 */
+.intro-block {
+  max-width: 720px;
+  margin: 24px 0 0 0px; /* 头像 180px + gap 30px */
   font-size: 15px;
   line-height: 1.7;
   color: #333;
-  margin-top: 24px; /* 与按钮保持间距 */
-  max-width: 720px;  /* 控制文字宽度 */
 }
 
 @media (max-width: 700px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
-  }
-  .intro {
-    margin-top: 16px;
-    max-width: 100%;
+  .intro-block {
+    margin-left: 0;
     text-align: center;
+    max-width: 100%;
   }
 }
 
 
 
-    /* -------- BUTTONS -------- */
-    .contact-buttons a {
-      display: inline-block;
-      margin-right: 10px;
-      margin-top: 12px;
-      padding: 8px 16px;
-      border-radius: 24px;
-      border: 1px solid #0070f3;
-      color: #0070f3;
-      text-decoration: none;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-    .contact-buttons a:hover {
-      background-color: #0070f3;
-      color: white;
+    /* -------- INTRO -------- */
+    .intro {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+      margin-top: 24px;
+      max-width: 720px;
     }
 
     /* -------- CONTENT SECTIONS -------- */
@@ -204,19 +190,107 @@ nav a:hover {
     /* Smooth fade for section entry */
     section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     section.visible { opacity: 1; transform: translateY(0); }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column;
+        align-items: center;
+      }
+      .intro {
+        text-align: center;
+        margin-top: 16px;
+        max-width: 100%;
+      }
+    }
+    /* Research Grid */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.research-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.research-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.research-title {
+  padding: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Modals */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
   </style>
 </head>
-
 <body>
   <!-- NAVBAR -->
-<header>
-  <div class="container nav-container">
+  <header>
+    <div class="container nav-container">
       <div class="nav-name">Zhengze Yu</div>
       <nav>
         <a href="#about">About me</a>
         <a href="#news">News</a>
         <a href="#research">Research</a>
-         <a href="#projects">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -239,7 +313,7 @@ nav a:hover {
 
       <div class="contact-buttons">
         <a href="mailto:yuzhengze21@mails.ucas.ac.cn">
-          <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16v16H4z" fill="none"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
@@ -247,62 +321,153 @@ nav a:hover {
         </a>
 
         <a href="cv.pdf">
-          <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
           </svg>
           CV
         </a>
       </div>
-
-      <p class="intro">
-        <b>Welcome to my page!</b> I work on <b>video editing</b> and <b>multimodal learning</b>, 
-        with a focus on <b>vision-language alignment</b> and <b>generative models</b> for controllable video transformation.
-        <br><br>
-        I am an undergraduate researcher at the <b>Institute of Automation, Chinese Academy of Sciences (UCAS)</b>, 
-        where I explore multimodal generation and video understanding. 
-        My recent projects involve <b>attention-injection-based video editing</b> and <b>cross-modal alignment frameworks</b>.
-        <br><br>
-        I am fortunate to be advised by <b>Prof. Junyu Gao</b>, whose guidance has greatly shaped my research 
-        in video generation and alignment methods.
-        <br><br>
-        For more details, please check my 
-        <a href="cv.pdf" target="_blank"><b>CV</b></a> 
-        or reach out via 
-        <a href="mailto:yuzhengze21@mails.ucas.ac.cn"><b>email</b></a>.
-      </p>
     </div>
+  </div>
+  <div class="intro-block">
+    <p>
+      <b>✨Welcome to my page!</b> 
+    </p>
+    <p>
+      I work on <b>Video Generation</b>, with a focus on <b>Multimodal Learning</b>, <b>Video Editing</b> and <b>Vision-Language Alignment</b> for controllable video transformation.
+    </p>
+   <p>
+  I have been fortunate to complete a research internship at the <b>Institute of Automation, Chinese Academy of Sciences (CASIA)</b>, where I explore multimodal generation and video understanding. My recent research involve <b>attention-injection-based video editing</b> and <b>cross-modal alignment frameworks</b>.
+</p>
+<p>
+  I am very grateful to be advised by <b>🎓Prof. Junyu Gao</b>, whose guidance has greatly shaped my research in video generation and alignment methods.
+</p>
+
+    <p>
+      For more details, please check my <a href="cv.pdf"><b>CV</b></a> or reach out via <a href="mailto:yuzhengze21@mails.ucas.ac.cn"><b>email</b></a>.
+    </p>
   </div>
 </section>
 
 
+  <!-- NEWS SECTION -->
+  <!-- NEWS SECTION -->
+<section id="news">
+  <h2>News📢</h2>
+  <ul>
+    <li>[Dec, 2025] 🎄🎄🎄Wishing everyone a <b>Merry Christmas</b>🎄🎄🎄</li>
+    <li>[Jul, 2025] Successfully <b>graduated with a B.E. in Artificial Intelligence</b> from the University of Chinese Academy of Sciences (UCAS).</li>
+    <li>[Jun, 2025] Completed my <b>graduation thesis</b> on attention-injection-based video editing and cross-modal alignment frameworks.</li>
+    <li>[May, 2025] Conducted a <b>research internship</b> at the Institute of Automation, CAS, focusing on multimodal video generation and understanding.</li>
+    <li>[Mar, 2025] Participated in a <b>text data mining project</b>, exploring large-scale multimodal datasets and vision-language alignment.</li>
+  </ul>
+</section>
 
-  <!-- NEWS -->
-  <section id="news">
-    <h2>News</h2>
-    <ul>
-      <li>[Month, Year] Placeholder for your latest research or project update.</li>
-      <li>[Month, Year] Another placeholder for news or event.</li>
-    </ul>
-  </section>
+</body>
+</html>
 
-  <!-- RESEARCH -->
-  <section id="research">
-    <h2>Research</h2>
-    <ul>
-      <li><b>Video Editing Based on Attention Injection</b> — Multi-stage cross-modal video editing framework integrating text, image, and video.</li>
-      <li><b>Multilingual Text Compression via Subword Tokenization</b> — Applied BPE for multilingual compression and token representation optimization.</li>
-    </ul>
-  </section>
+
+  <!-- RESEARCH SECTION -->
+<section id="research">
+  <h2>Research</h2>
+  <div class="research-grid">
+    <!-- Project 1 -->
+    <div class="research-card" onclick="openModal('project1')">
+      <img src="img/video_editing.jpg" alt="Video Editing Project">
+      <div class="research-title">Video Editing Based on Attention Injection</div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="research-card" onclick="openModal('project2')">
+      <img src="img/text_compression.jpg" alt="Text Compression Project">
+      <div class="research-title">Multilingual Text Compression via Subword Tokenization</div>
+    </div>
+
+    <!-- 可继续添加更多项目卡片 -->
+  </div>
+</section>
+
+<!-- MODALS -->
+<div id="project1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('project1')">&times;</span>
+    <h3>Video Editing Based on Attention Injection</h3>
+    <p>Multi-stage cross-modal video editing framework integrating text, image, and video. This project explores attention-injection methods for controllable video transformations.</p>
+    <img src="img/video_editing_detail.jpg" alt="Video Editing Detail">
+  </div>
+</div>
+
+<div id="project2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('project2')">&times;</span>
+    <h3>Multilingual Text Compression via Subword Tokenization</h3>
+    <p>Applied BPE for multilingual compression and token representation optimization. Focused on improving token efficiency and cross-lingual alignment.</p>
+    <img src="img/text_compression_detail.jpg" alt="Text Compression Detail">
+  </div>
+</div>
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+// 点击模态窗口外部关闭
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>
 
     <!-- PROJECT -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><b>Video Editing Based on Attention Injection</b> — Multi-stage cross-modal video editing framework integrating text, image, and video.</li>
-      <li><b>Multilingual Text Compression via Subword Tokenization</b> — Applied BPE for multilingual compression and token representation optimization.</li>
-    </ul>
-  </section>
+  <!-- PROJECTS SECTION -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="research-grid">
+    <div class="research-card" onclick="openModal('proj1')">
+      <img src="img/project_video_editing.jpg" alt="Video Editing Project">
+      <div class="research-title">Video Editing Based on Attention Injection</div>
+    </div>
+
+    <div class="research-card" onclick="openModal('proj2')">
+      <img src="img/project_text_compression.jpg" alt="Text Compression Project">
+      <div class="research-title">Multilingual Text Compression via Subword Tokenization</div>
+    </div>
+
+    <!-- 你可以继续添加更多项目 -->
+  </div>
+</section>
+
+<!-- PROJECT MODALS -->
+<div id="proj1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj1')">&times;</span>
+    <h3>Video Editing Based on Attention Injection</h3>
+    <p>
+      Multi-stage cross-modal video editing framework integrating text, image, and video.
+      This project explores attention-injection methods for controllable video transformations.
+    </p>
+    <img src="img/project_video_editing_detail.jpg" alt="Video Editing Detail">
+  </div>
+</div>
+
+<div id="proj2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('proj2')">&times;</span>
+    <h3>Multilingual Text Compression via Subword Tokenization</h3>
+    <p>
+      Applied BPE for multilingual compression and token representation optimization,
+      focusing on improving token efficiency and cross-lingual alignment.
+    </p>
+    <img src="img/project_text_compression_detail.jpg" alt="Text Compression Detail">
+  </div>
+</div>
+
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
@@ -322,4 +487,5 @@ nav a:hover {
   </script>
 </body>
 </html>
+
 
