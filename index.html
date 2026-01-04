@@ -179,6 +179,18 @@
 
     @media (max-width: 900px) {
       .about { flex-direction: column; align-items: center; }
+      .about-text {
+    align-items: center;      /* 控制内部元素横向居中 */
+    text-align: center;       /* 控制文字居中 */
+  }
+
+  .tags {
+    justify-content: center;  /* tag 本身是 flex，需要单独处理 */
+  }
+
+  .contact-buttons {
+    justify-content: center;  /* 按钮一排居中 */
+  }
       .intro-block { margin-left: 0; text-align: center; max-width: 100%; }
     }
 
